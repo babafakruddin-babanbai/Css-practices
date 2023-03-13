@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Define styles for the grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+/* Define styles for grid items */
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100%; /* Maintain 1:1 aspect ratio for images */
+}
+
+/* Define styles for images */
+.grid-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Scale and crop images to fill grid items */
+}
+
+/* Media queries for smaller screens */
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Media queries for even smaller screens */
+@media screen and (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item"><img src="image-1.jpg" alt="Image 1"></div>
+        <div class="grid-item"><img src="image-1.jpg" alt="Image 2"></div>
+        <div class="grid-item"><img src="image-1.jpg" alt="Image 3"></div>
+        <div class="grid-item"><img src="image-1.jpg" alt="Image 4"></div>
+        <div class="grid-item"><img src="image-1.jpg" alt="Image 5"></div>
+        <div class="grid-item"><img src="image-1.jpg" alt="Image 6"></div>
+        <div class="grid-item"><img src="image-1.jpg" alt="Image 5"></div>
+      </div>
+      
+</body>
+</html>
